@@ -5,20 +5,14 @@ CREATE TABLE `room` (
 	`author_id` varchar(100) NOT NULL,
 	`scenario_id` int NOT NULL,
 	`status` tinyint NOT NULL,
-	PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `author` (
-	`id` int NOT NULL AUTO_INCREMENT,
-	`login` varchar(50) NOT NULL UNIQUE,
-	`password` varchar(100) NOT NULL,
+    `time_start` datetime NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `member` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`room_id` int NOT NULL,
-	`device` varchar(200) NOT NULL UNIQUE,
+	`deviceid` varchar(200) NOT NULL UNIQUE,
 	PRIMARY KEY (`id`)
 );
 
