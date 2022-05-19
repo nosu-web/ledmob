@@ -11,7 +11,7 @@ CREATE TABLE `room` (
 CREATE TABLE `member` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`room_id` int NOT NULL,
-	`deviceid` varchar(200) NOT NULL UNIQUE,
+	`deviceid` varchar(200) NOT NULL,
 	`is_author` tinyint(1) NOT NULL,
 	PRIMARY KEY (`id`)
 );
