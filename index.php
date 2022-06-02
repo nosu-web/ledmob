@@ -37,4 +37,10 @@ $router->mount('/api/room', function() use ($router) {
     });
 });
 
+$router->set404(function() {
+    http_response_code(404);
+    $responce = array("message" => "Неверный маршрут"); 
+    echo json_encode($responce);
+});
+
 $router->run();
