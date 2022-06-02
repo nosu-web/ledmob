@@ -1,15 +1,17 @@
 <?php
+require __DIR__ . '/config.php';
+
 class Database {
 
     // укажите свои учетные данные базы данных 
-    private $host = "localhost";
-    private $db_name = "ledmob";
-    private $username = "root";
-    private $password = "";
+    private $host = DBHOST;
+    private $db_name = DBNAME;
+    private $username = DBUSER;
+    private $password = DBPWD;
     public $conn;
 
     // получаем соединение с БД 
-    public function getConnection(){
+    public function getConnection() {
 
         $this->conn = null;
 
